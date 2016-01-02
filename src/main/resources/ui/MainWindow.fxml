@@ -9,9 +9,9 @@
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="%mainWindow.menu.fileMenu">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Open Backup" />
+                  <MenuItem mnemonicParsing="false" text="%mainWindow.menu.fileMenu.openBackup" />
                </items>
           </Menu>
         </menus>

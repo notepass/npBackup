@@ -5,7 +5,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane fx:id="MainWindowTabContent" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="rootPane" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.notepass.npBackup.ui.bindings.MainWindowTab">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -21,8 +21,8 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowSpan="2">
                <children>
-                  <Label text="Files in Archive" />
-                  <TreeView maxHeight="1.7976931348623157E308" prefHeight="9000.0" prefWidth="290.0" snapToPixel="false" />
+                  <Label text="%backupTab.archiveFiles.label" />
+                  <TreeView fx:id="archiveFileTree" maxHeight="1.7976931348623157E308" prefHeight="9000.0" prefWidth="290.0" snapToPixel="false" />
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -30,8 +30,8 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.rowSpan="2">
                <children>
-                  <Label text="Local Files" />
-                  <TreeView maxHeight="1.7976931348623157E308" prefHeight="9000.0" prefWidth="290.0" snapToPixel="false" />
+                  <Label text="%backupTab.localFiles.label" />
+                  <TreeView fx:id="localFileTree" maxHeight="1.7976931348623157E308" prefHeight="9000.0" prefWidth="290.0" snapToPixel="false" />
                </children>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -42,8 +42,8 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="9000.0" text="Start Backup" textAlignment="CENTER" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="9000.0" text="Configure Backup" textAlignment="CENTER" />
+                  <Button fx:id="startBackupButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="9000.0" text="%backupTab.startBackup.button" textAlignment="CENTER" />
+                  <Button fx:id="configureBackupButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="9000.0" text="%backupTab.configureBackup.button" textAlignment="CENTER" />
                </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -51,8 +51,8 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="9000.0" text="Restore Files" textAlignment="CENTER" />
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="9000.0" text="Advanced Options" textAlignment="CENTER" />
+                  <Button fx:id="restoreFilesButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="9000.0" text="%backupTab.restoreFiles.button" textAlignment="CENTER" />
+                  <Button fx:id="advancedOptionsButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="9000.0" text="%backupTab.advancedOptions.button" textAlignment="CENTER" />
                </children>
             </VBox>
          </children>
